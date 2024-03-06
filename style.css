@@ -1,4 +1,4 @@
-@media (min-width: 477px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
   .carousel-caption {
     width: 100%;
     padding: 0 20px;
@@ -18,7 +18,7 @@
 
 
 
-@media (min-width: 477px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
   .contact-info {
     display: block;
     /* Show contact info on larger screens */
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-width: 477px) and (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
 
   .whatsapp-button,
   .call-button {
@@ -70,7 +70,7 @@
 
   .card-title {
     width: 100%;
-    font-size: 40px;
+    font-size: 24px;
   }
 
   .res {
@@ -321,7 +321,7 @@ h4 {
 .arrow-list li::before {
   content: "";
   /* Unicode for right arrow */
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
 
 .para {
