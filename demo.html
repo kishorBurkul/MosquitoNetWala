@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <style>
+    body{
+
+        background-image: url(services/cirlce.jpg);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        align-content: center;
+        text-align: center;
+        background-position: center;
+
+    }
+    .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+   
+    }
+
+    .circle{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        color: green;
+    }
+    .small{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        animation: head 3s infinite linear;
+       
+    }
+
+    
+    @keyframes head{
+        0%{
+          outline-color: aqua;
+          background-color: rgb(135, 205, 135);
+        } 25%{
+            background-color: rgb(152, 155, 152);
+            outline-color: aqua;
+         }
+         50%{
+            background-color: rgb(184, 240, 184);
+            outline-color: aqua;
+        }
+        100%{
+            background-color: green;
+            outline-color: rgb(135, 156, 156);
+        }
+    }
+
+    @keyframes small{
+        from{
+       transform: translateX();
+        } to{
+
+        }
+
+    }
+
+    </style>
+   </head>
+<body>
+    <div class="container">
+    <div class="make">
+        <div class="head">
+           <div class="circle one">
+            <div class="small"></div>
+           </div>
+           <div class="circle two ">
+            <div class="small"></div>
+           </div>
+           <div class="circle">
+            <div class="small"></div>
+           </div>
+        
+        <h1>Jii</h1>
+
+ </div>
+</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

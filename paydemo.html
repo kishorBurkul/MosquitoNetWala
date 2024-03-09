@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(to bottom right, #520000, #420000);
+        }
+
+        .container {
+            height: 100%;
+            /* background: linear-gradient(to bottom right,#520000, #420000);  */
+        }
+
+        nav {
+            /* background-color: rgba(255, 255, 255, 0.5); */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-button {
+            font-size: 24px;
+            color: #ffa500;
+            text-decoration: none;
+        }
+
+        .profile-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .watch {
+            width: 400px;
+            height: 400px;
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            background: linear-gradient(to bottom right, #ffd700, #ffa500);
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            border-left: 4px solid black
+        }
+
+        .hour,
+        .minute,
+        .second {
+            position: absolute;
+            background-color: black;
+        }
+
+        .hour {
+            width: 4px;
+            height: 200px;
+            top: 0%;
+            left: 50%;
+            transform-origin: bottom center;
+            transform: translateX(-50%) rotate(0deg);
+        }
+
+        .minute {
+            width: 4px;
+            height: 200px;
+            top: 0%;
+            left: 50%;
+            transform-origin: bottom center;
+            transform: translateX(-50%) rotate(120deg);
+        }
+
+        .second {
+            width: 4px;
+            height: 200px;
+            top: 0%;
+            left: 50%;
+            transform-origin: bottom center;
+            transform: translateX(-50%) rotate(240deg);
+        }
+
+        .small-circle-one {
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            margin-left: 50px;
+            background-color: #8af07c;
+            border-radius: 50%;
+
+            /* border-right: 40px solid transparent;
+            border-bottom: 80px solid rgb(11, 8, 10);
+            border-left: 100px solid transparent; */
+        }
+
+        .small-circle-two {
+            width: 30px;
+            height: 30px;
+            margin-left: 70px;
+            margin-top: 130px;
+            background-color: #fcf94a;
+            border-radius: 50%;
+            animation: small-circle 1.5s 0s ease-out infinite;
+        }
+
+        .small-circle-three {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            margin-left: 80px;
+            top: 110px;
+            background-color: #1eff00;
+            border-radius: 50%;
+            animation: small-circle 1.5s 0s ease-out infinite;
+        }
+
+        @keyframes small-circle {
+            0% {
+                box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(207, 8, 8, 0);
+            }
+
+            10% {
+                box-shadow: 0 0 8px 6px, 0 0 12px 10px rgba(0, 0, 0, 0), 0 0 12px 14px;
+            }
+
+            100% {
+                box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 40px rgba(0, 0, 0, 0), 0 0 0 40px rgba(207, 8, 8, 0);
+            }
+        }
+
+        /* .second {
+    width: 2px;
+    height: 200px;
+    top: 0%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(240deg);
+    background: repeating-linear-gradient(to bottom, black 0%, black 50%, transparent 50%, transparent 100%);
+} */
+
+        .second-direction {
+            content: "";
+            position: relative;
+            bottom: 0px;
+            /* Adjust this value to position the line */
+            left: 0%;
+            width: 2px;
+            height: 10px;
+            background-color: black;
+            border-radius: 2px;
+        }
+
+
+        /* .minute {
+      width: 4px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform-origin: 50% 0%;
+      transform: translateX(-50%) rotate(-60deg);
+    }
+
+    .second {
+      width: 4px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform-origin:  50% 0%;
+      transform: translateX(-50%) rotate(-290deg);
+    } */
+        .fisrt-direction {
+            color: white;
+            position: absolute;
+            margin-left: -100px;
+        }
+
+        .vertical-line {
+            width: 0px;
+            /* Width of the line */
+            height: 40px;
+            /* Height of the line */
+            /* background: repeating-linear-gradient(to bottom, black 0%, black 2px, transparent 2px, transparent 4px); Adjust the size of dots */
+            border: 1px dashed white;
+            color: white;
+            margin-left: 50px;
+
+        }
+
+        .dotted-line {
+            position: relative;
+            width: 125px;
+            border: 1px dashed white;
+            margin-left: 50px;
+        }
+
+        /* .dotted-line::before,
+    .dotted-line::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    } */
+
+        /* .dotted-line::before {
+        border-top: 1px dotted black;
+        top: 0;
+        left: 0;
+    } */
+
+        /* .dotted-line::after {
+        border-left: 1px dotted black;
+        top: 0;
+        left: 0;
+    } */
+
+        .dotted-line-two {
+            position: relative;
+            width: 0px;
+            top: 0px;
+            height: 100px;
+            margin-top: 190px;
+            margin-left: 305px;
+            border: 1px dashed white;
+        }
+
+        .target {
+            position: absolute;
+            /* margin-top:110px; */
+            top: 90px;
+            right: -40px;
+            width: 200px;
+            margin-right: -100px;
+
+        }
+
+        /* .carousel{
+    text-align: center;
+} */
+        .indicators {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-100%);
+            display: flex;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #888;
+            margin: 0 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: #ede4e4;
+        }
+
+        /*card*/
+        .card-section {
+            display: flex;
+            margin-top: 90px;
+            margin-left: 147px;
+        }
+
+        .card-one {
+            width: 170px;
+            height: 100px;
+            background-color: rgba(223, 173, 38, 0.903);
+            color: white;
+            margin-right: -1px;
+            /* Remove gap between cards */
+            border: 1px solid black;
+            /* Add border */
+            border-radius: 20px 0px 0px 20px;
+            /* Add border radius */
+            box-shadow: 0px 6px 6px rgba(223, 173, 38, 0.903);
+            /* Add box shadow */
+        }
+
+        .card-two {
+            width: 170px;
+            height: 100px;
+            background-color: rgba(223, 173, 38, 0.903);
+            color: white;
+            margin-right: -1px;
+            /* Remove gap between cards */
+            border: 1px solid black;
+            /* Add border */
+            border-radius: 0px 20px 20px 0px;
+            /* Add border radius */
+            box-shadow: 0px 6px 6px rgba(223, 173, 38, 0.903);
+            /* Add box shadow */
+        }
+
+        .card p {
+            /* text-align: center; */
+            /* line-height: 200px; Center text vertically */
+            margin: 0;
+        }
+
+        h3 {
+            text-align: center;
+            color: black;
+        }
+
+        /* Last Section*/
+        .containerr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 270px;
+
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            margin-right: 400px;
+            background-color: rgb(94, 24, 24);
+            /* Water color */
+            border-radius: 50%;
+            /* Circle shape */
+            border: 2px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rank {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1px;
+            /* color: rgb(10, 2, 2); */
+            color: white;
+            margin: 0;
+        }
+
+        .progress-bar {
+            width: 40%;
+            /* Adjust as needed */
+            height: 30px;
+            /* Height of the progress bar */
+            /* background-color: #ccc; Background color of the progress bar */
+            position: absolute;
+            margin-left: 26%;
+            border-radius: 0px 10px 0px 0px;
+
+        }
+
+        .small-circle {
+            width: 10px;
+            height: 10px;
+            background-color: grey;
+            /* Color of the small circles */
+            border-radius: 50%;
+            /* Circle shape */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .small-circle:nth-child(1) {
+            left: 25%;
+            height: 40px;
+            width: 40px;
+            margin-top: 10px;
+            margin-left: 30px;
+
+        }
+
+        .small-circle:nth-child(2) {
+            left: 75%;
+            height: 40px;
+            width: 40px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+
+        progress {
+            background-color: #ffa500;
+            border-radius: 20px;
+        }
+
+
+        progress {
+            color: black;
+        }
+
+        progress::-webkit-progress-value {
+            background: #ffa500
+        }
+
+        progress::-moz-progress-bar {
+            background: black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="#" class="back-button"
+                style="display: block; width: 50px; height: 50px; background-color: #f9f64df6; font-size: 30px; border-radius: 10px;"><span
+                    style="display: block;margin-top: 8px; margin-left: 10px;">&larr;</span></a>
+            <img src="services/cirlce.jpg" alt="Profile Image" class="profile-image">
+        </nav>
+        <div class="watch">
+            <div class="hour">
+                <!-- <div class="triangle">Hiii</div> -->
+            </div>
+            <!-- <div class="small-circle-one"></div> -->
+            <div class="minute">
+                <div class="small-circle-two"></div>
+                <!-- <div class="vertical-line">Hii</div> -->
+                <!-- <div class="dotted-line-two"></div> -->
+            </div>
+            <div class="second">
+                <div class="second-direction"></div>
+
+            </div>
+            <div class="fisrt-direction">
+                <p>Target :16 Retailer</p>
+                <p>Current :8 Retailer</p>
+                <div class="vertical-line"></div>
+                <div class="dotted-line"></div>
+                <div class="dotted-line-two">
+                    <div class="target">
+                        <p>Target: &#8377;1,00,000</p>
+                        <p>Current: &#8377;75,000</p>
+                        <!-- <div><span style="width: px; height: px; background-color: white; border-radius: 0%;">.</span></div> -->
+                        <div class="indicators">
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-section">
+                    <div class="card-one">
+                        <h3>Total Points</h3>
+                        <div style="display: flex; margin-top: -20px;">
+                            <p
+                                style="width: 30px; height: 30px; border-radius: 50%; background-color: #e71965; text-align: center; margin-left: 40px;">
+                                P1</p>
+                            <p style="font-size: 20px; margin-left: 10px; color: black;"><b>4020</b></p>
+                        </div>
+                    </div>
+                    <div class="card-two">
+                        <h3>Daily Points</h3>
+                        <div style="display: flex;  margin-top: -20px;">
+                            <p
+                                style="width: 30px; height: 30px; border-radius: 50%; background-color: #e71965; text-align: center; margin-left: 40px;">
+                                P1</p>
+                            <p style="font-size: 20px; margin-left: 10px; color: black;"><b>4020</b></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    style="display: flex; margin-top: 20px; margin-left: 170px; font-size: 18px; text-decoration: underline;">
+                    <a>Ramesh and 100+ Completed Bramhastra. </a></div>
+
+            </div>
+
+            <div class="small-circle-three"></div>
+        </div>
+        <!-- <div class="carousel">
+             Hii
+        </div> -->
+        <div class="containerr">
+            <div class="circle">
+                <div class="rank">
+                    <p>14</p>
+                    <p>Rank</p>
+                </div>
+
+            </div>
+
+            <div class="progress-bar " style="margin-bottom: 30px;">
+
+                <div class="small-circle"><span
+                        style="display: inline-block; margin-top: 10px; margin-left: 5px; color: white;"><b>10L</b></span>
+                    <p style="color: white;"><b>5gm</b> </p>
+                </div>
+                <div class="small-circle"><span
+                        style="display: inline-block; margin-top: 10px; margin-left: 5px; color: white;"><b>20L</b></span>
+                    <p style="color: white;"><b>5gm</b> </p>
+                </div>
+                <progress value="59" max="100" style="width: 500px; height: 20px; margin-top: 15px ; margin-left: 5px;">
+                </progress>
+            </div>
+            <p style="color: white; margin-left: 120px;">Business Be Pakad</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  background: linear-gradient(to bottom right, #ffd700, #ffa500);
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-button {
+  font-size: 24px;
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.pizza-part {
+  width: 130px;
+  height: 130px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #ffd700;
+  border-radius: 50%;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="#" class="back-button">&larr;</a>
+      <img src="profile.jpg" alt="Profile Image" class="profile-image">
+    </nav>
+    <div class="circle">
+      <div class="pizza-part">
+        <div class="small-circle"></div>
+      </div>
+      <div class="pizza-part">
+        <div class="small-circle"></div>
+      </div>
+      <div class="pizza-part">
+        <div class="small-circle"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .watch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .clock {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 10px solid black;
+      border-radius: 50%;
+    }
+
+    .hour, .minute, .second {
+      position: absolute;
+      background: black;
+      transform-origin: center;
+    }
+
+    .hour {
+      width: 6px;
+      height: 50px;
+      top: 50px;
+    }
+
+    .minute {
+      width: 4px;
+      height: 80px;
+      top: 40px;
+    }
+
+    .second {
+      width: 2px;
+      height: 100px;
+      top: 30px;
+    }
+
+    .center {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: black;
+      border-radius: 50%;
+      top: 94px;
+      left: 94px;
+    }
+
+    /* Adjustments for direction */
+    .minute.east {
+      left: 100px;
+      top: 94px;
+    }
+
+    .minute.north {
+      left: 94px;
+      top: 10px;
+    }
+
+    .minute.south {
+      left: 94px;
+      top: 174px;
+    }
+
+    .second.east {
+      left: 100px;
+      top: 94px;
+    }
+
+    .second.north {
+      left: 94px;
+      top: 10px;
+    }
+
+    .second.south {
+      left: 94px;
+      top: 174px;
+    }
+
+    .hour.east {
+      left: 100px;
+      top: 94px;
+    }
+
+    .hour.north {
+      left: 94px;
+      top: 10px;
+    }
+
+    .hour.south {
+      left: 94px;
+      top: 174px;
+    }
+  </style>
+</head>
+<body>
+    <div class="watch">
+        <div class="clock">
+          <div class="hour north"></div>
+          <div class="minute north"></div>
+          <div class="second north"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+      
+</body>
+</html> -->
