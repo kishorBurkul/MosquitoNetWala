@@ -357,6 +357,29 @@
   .navbar-collapse a :hover{
       color: #224abe;
   }
+  
+}
+
+@media (max-width: 767px) {
+  .flex {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    justify-content: space-between;
+    max-height: 100%;
+   
+  }
+  .flex > * {
+    margin: 5px;
+  }
+   #first #second #third #fourth #five #six{
+    max-width: 50px; 
+    height: 0px;
+   }
+   #five{
+    max-width: 100%; 
+   height: 50px;
+   } 
 }
   </style>
 </head>
@@ -462,89 +485,76 @@
       <div class="card mt-0 d-md-none" >
         <div class="card-body">
            <div class="flex"> 
-            <a href="#pleated" class="card-title text-center text-white" 
-            style="font-size:16px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); border-radius: 10px;">
-            <b>Pleated Mosquito Net</b>
-            </a> 
-           <a href="#window" class="card-title text-center ml-2 text-white" 
-            style="font-size:16px; background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;"><b>Mosquito Nets For Window</b></a></div>
+            <p id="first"  class="card-title text-center" 
+            style="font-size:16px;
+             background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); border-radius: 10px;">
+            <b><a href="#pleated" class="text-white">Pleated Mosquito Net</a></b>
+            </p> 
+
+           <p id="second" class="card-title text-center" 
+            style="font-size:16px; position:relative;margin-left: 2px;
+            background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;">
+            <b><a href="#window" class="text-white" >Mosquito Nets For Windows</a></b></p></div>
+
            <div class="flex"> 
-            <a href="#door" class="card-title text-center text-white" 
-            style="font-size:16px;  background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);border-radius: 10px;"><b>Mosquito Net For Door</b></a> 
-            <a  href="#balcony" class="card-title text-center ml-2 text-white" 
-            style="font-size:16px;  background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-          </a></div>
+            <p id="third"  class="card-title text-center text-white" 
+            style="font-size:16px;  background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);border-radius: 10px;">
+            <b>  <a href="#door" class="text-white" > Mosquito Net For Door</a></b></p> 
+
+            <p  id="fourth"  class="card-title text-center text-white" 
+            style="font-size:16px;  position:relative;margin-left: 2px;
+            background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);border-radius: 10px;"><b>
+              <a href="#balcony" class="text-white" >Mosquito Net For Balcony</a></b>
+          </p></div>
+
             <div class="flex"> 
-            <a href="#velcro" class="card-title text-center text-white" 
-            style="font-size:16px;  background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;" ><b>Velcro Net For Windows</b></a> 
+            <p id="five"  class="card-title text-center text-white" 
+            style=" position:relative;font-size:16px;  background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;" >
+            <b> <a href="#velcro" class="text-white" >Velcro Net For Windows</a></b></p> 
+
           
-             <a href="#pigeon" class="card-title text-center ml-2 text-white" 
-             style="font-size:16px; border-radius: 10px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); box-shadow: 0 4px 4px 0 rgba(87,75,172,.15); border-radius: 10px;" ><b>Pigeon Net For Balcony</b></a></div>
-            <!-- <h5 class="card-title text-center">Mosquito Nets For Window</h5>
-            <h5 class="card-title text-center">Mosquito Net For Door</h5>
-            <h5 class="card-title text-center">Mosquito Net For Balcony</h5>
-            <h5 class="card-title text-center">Velcro Net For Windows</h5>
-            <h5 class="card-title text-center">Pigeon Net For Balcony</h5> -->
-
-            <!-- <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;   background: linear-gradient(to bottom, #45aaf2, #3498db);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px; background: linear-gradient(to bottom, #ff6b81, #ee5253); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div>
-
-            <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px; background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div>
-            <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px; background: linear-gradient(90deg, rgba(190,153,215,1) 4%, rgba(135,253,29,0.6783963585434174) 47%, rgba(252,176,69,1) 93%); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div>
-            -----------------------------------------------
-            <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;  
-              background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5);
-              border-radius: 10px;">
-               <b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px;
-               background: linear-gradient(56deg, #ff0b45, #ff7d09 50.33%, #ffcc00); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div>
-
-
-            <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;   
-               background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);
-              border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px; 
-             background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);
-               border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div>
-
-
-            <div class="flex"> 
-              <p class="card-title text-center text-white" 
-              style="font-size:16px;  
-               background: linear-gradient(56deg, #ff8c00, #ffeb3b 50.33%, #e6ff00);
-               border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
-              <p class="card-title text-center ml-2 text-white" 
-              style="font-size:16px; 
-               background: linear-gradient(56deg, #45f9c4, #2ecc71 50.33%, #3498db);
-               border-radius: 10px;"><b>Mosquito Net For Balcony</b>
-            </p></div> -->
-
-        </div>
-    </div>
+             <p  id="six"  class="card-title text-center text-white" 
+             style="position:relative;margin-left: 2px; font-size:16px; border-radius: 10px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); 
+             border-radius: 10px;" >
+            <b><a href="#pigeon" class="text-white" >Pigeon Net For Balcony</a></b> </p>
+             
+            </div>
+      </div>
     </div>
   </div>
+ </div>
+
+
+
+  
+    <!-- <div class="card mt-0">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#pleated" class="card-title text-center text-white" style="font-size:16px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); border-radius: 10px; display: block;"><b>Pleated Mosquito Net</b></a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#window" class="card-title text-center text-white" style="font-size:16px; background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px; display: block;"><b>Mosquito Nets For Window</b></a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#door" class="card-title text-center text-white" style="font-size:16px;  background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);border-radius: 10px; display: block;"><b>Mosquito Net For Door</b></a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#balcony" class="card-title text-center text-white" style="font-size:16px;  background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);border-radius: 10px; display: block;"><b>Mosquito Net For Balcony</b></a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#velcro" class="card-title text-center text-white" style="font-size:16px;  background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px; display: block;" ><b>Velcro Net For Windows</b></a>
+              </div>
+              <div class="col-12 col-md-6 mb-3">
+                  <a href="#pigeon" class="card-title text-center text-white" style="font-size:16px; border-radius: 10px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); box-shadow: 0 4px 4px 0 rgba(87,75,172,.15); border-radius: 10px; display: block;"><b>Pigeon Net For Balcony</b></a>
+              </div>
+          </div>
+      </div>
+  </div> -->
+
+
+
+ 
 
   <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
