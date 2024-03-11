@@ -35,22 +35,32 @@
     display: none;
    
   } */
+ 
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
     /* Show contact info on larger screens */
-  .contact-info {
-    /* display: block;
-    display: none; */
-    /* visibility: hidden; */
-  }
-  
  /* Hide WhatsApp and Call buttons on larger screens */
   
 
-  /* .offset-3 {
-    margin-left: 20px;
+  .offset-3 {
+    margin-left:0px;
+    max-width: 100%;
+  }
+   /* #google-review{
+    max-width: 100%;
+    margin-right: 100px;
   } */
+   /* #reviewCarousel{ 
+   width: 200px;
+  } */
+
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-info {
+  visibility: hidden;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -131,10 +141,7 @@
   .cap {
     width: auto;
   }
-  #google-review{
-    max-width: 100%;
-    margin-right: 100px;
-  }
+ 
 
 }
 
@@ -180,10 +187,10 @@
   margin-right: auto;
   /* Logo on the right */
 }
-
+/* Hide contact info on larger screens */
 .contact-info {
   display: none;
-  /* Hide contact info on larger screens */
+  
 }
 
 .navbar-toggler-icon {
@@ -201,8 +208,8 @@
 
 
 .navbar {
-  background-color: #333333;
-  ;
+  /* background-color: #333333;
+  ; */
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -331,8 +338,9 @@ h4 {
 
 /* Customize the section */
 #about-us-section {
-  padding: 80px 0;
+  /* padding: 80px 0; */
   background-color: #2c4357;
+ 
 }
 
 /* Customize the columns */
@@ -350,7 +358,8 @@ h4 {
 
 /* Arrow For list in about us */
 .arrow-list {
-  list-style-type: none;
+  list-style-type:circle;
+  color: white;
 }
 
 .arrow-list li::before {
@@ -362,6 +371,7 @@ h4 {
 .para {
   /* text-transform: capitalize; */
   line-height: 25px;
+  text-transform: capitalize;
 }
 
 /* Style for form input fields */
@@ -408,6 +418,9 @@ h4 {
 .inquiry-form {
   background-color: #f8f9fa;
   padding: 50px;
+}
+.card-text{
+  text-transform: capitalize;
 }
 
 

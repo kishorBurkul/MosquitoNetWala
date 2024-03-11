@@ -17,6 +17,7 @@
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="style.css">
   <style>
     /* Custom styles */
@@ -54,7 +55,7 @@
     }
 
     .p {
-      font-size: 18px;
+      font-size:16px;
     }
 
     /* .plus {
@@ -128,6 +129,7 @@
 
     /* Google Review */
     .review-card {
+      max-width: 100%;
       margin: 20px;
       padding: 20px;
       border: 1px solid #ccc;
@@ -144,6 +146,7 @@
     .review-text {
       margin-top: 10px;
       font-size: 18px;
+      text-transform: capitalize;
     }
 
     .icon {
@@ -290,6 +293,9 @@
     } */
 
    
+
+
+    
     /* Adjust position on smaller screens */
    
     @keyframes rotateCallButton {
@@ -316,156 +322,262 @@
     .imgg{
       border-radius: 90px 0px 90px 0px;
     }
+    @media only screen and (max-width: 767px) {
+  .contact-info {
+  display:none;
+  }
+  #img1{
+    display: none;
+  }
+}
+ 
+/* .card-img-top {
+  height: 150px;
+  object-fit: cover;
+} */
+ .navbar-collapse a :hover{
+      color: #224abe;
+  }
+
+
+@media (max-width: 767px) {
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22m-22 8h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22'/%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 15h22'/%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .navbar-collapse a :hover{
+      color: #224abe;
+  }
+}
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav">
     <a class="navbar-brand ml-5 text-balck custom-text" href="#"
-      style="background: linear-gradient(to bottom, #ffff00 0%, #ff3300 100%); border-radius: 5px; width: 220px; text-align: center;">
-      <b>MOSQUITONET
-        WALA</b></a> 
+      style="background: linear-gradient(to bottom, #ffff00 0%, #ff3300 100%); font-family:alice ; border-radius: 5px; width: 220px; text-align: center;">
+      <strong>Mosquito Net Wala</strong></a> 
+       
     <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" style="color: white;"></span>
+      <span class="navbar-toggler-icon" style="color: green;"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto"> 
         <li class="nav-item">
-          <a class="nav-link" href="#carouselExampleControls"><b>HOME</b></a>
+          <a class="nav-link "  style="color: black;" href="#carouselExampleControls"><b>Home</b></a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link " style="color: black;" href="#about-us-section"><b>About Us</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#about-us-section"><b>ABOUT US</b></a>
+          <a class="nav-link " style="color: black;" href="Services.html"><b>Services</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="demo.html"><b>SERVICES</b></a>
+          <a class="nav-link "  style="color: black;" href="#contact"><b>Contact</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact"><b>CONTACT</b></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#gallery"><b>GALLERY</b></a>
+          <a class="nav-link " style="color: black;"  href="#gallery"><b>Gallery</b></a>
         </li>
       </ul>
       <div class="contact-info">
-        <span class="text-white mr-5"><a class="custom-button" href="tel:+9370573627"><i class="fas fa-phone"></i><b>+91
+        <span class="text-balck mr-5"><a class="custom-button" href="tel:+9370573627"><i class="fas fa-phone"></i><b>+91
               9370573627</b> </span></a>
 
-        <span class="text-white"><i class="fas fa-envelope"></i> <b>Email:mosquitonetwala111@gmail.com</b></span>
+        <span class="text-balck" style="color: black"><i class="fas fa-envelope"></i> <b>Email:mosquitonetwala111@gmail.com</b></span>
       </div>
     </div>
+  
   </nav>
+
+
+
+  
   <!-- Carousel -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <br class="mt-5"> 
+  <div class="container">
+    <div class="row mt-4 pt-4">
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/pleated.jpg" id="img1" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto; border-radius: 50%;">
+            <h5 class="card-title text-center">Pleated Mosquito Net</h5>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/window-logo.png" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto;">
+          
+            <h5 class="card-title text-center">Mosquito Nets For Window</h5>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/icons8-mosquito-net-64.png" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto; border-radius: 50%;">
+            <h5 class="card-title text-center">Mosquito Net For Door</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/balcony-logo.jpg" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto; border-radius: 50%;">
+            <h5 class="card-title text-center">Mosquito Net For Balcony</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/velcro-mosquito-net-window.jpg" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto;  border-radius: 50%;">
+            <h5 class="card-title text-center">Velcro Net For Windows</h5>
+            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-none d-md-block">
+        <div class="card mb-4">
+          <div class="card-body">
+            <img src="assets/home-logo/pigeon.jpg" class="img-fluid mx-auto d-block card-img-top card-img-top" alt="Service 2" style="width: 70px; height: auto; border-radius: 50%; ">
+            <h5 class="card-title text-center">Pigeon Net For Balcony</h5>
+          
+          </div>
+        </div>
+      </div>
+      <div class="card mt-0 d-md-none" >
+        <div class="card-body">
+           <div class="flex"> 
+            <a href="#pleated" class="card-title text-center text-white" 
+            style="font-size:16px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); border-radius: 10px;">
+            <b>Pleated Mosquito Net</b>
+            </a> 
+           <a href="#window" class="card-title text-center ml-2 text-white" 
+            style="font-size:16px; background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;"><b>Mosquito Nets For Window</b></a></div>
+           <div class="flex"> 
+            <a href="#door" class="card-title text-center text-white" 
+            style="font-size:16px;  background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);border-radius: 10px;"><b>Mosquito Net For Door</b></a> 
+            <a  href="#balcony" class="card-title text-center ml-2 text-white" 
+            style="font-size:16px;  background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+          </a></div>
+            <div class="flex"> 
+            <a href="#velcro" class="card-title text-center text-white" 
+            style="font-size:16px;  background: linear-gradient(to bottom, #4e73df, #224abe); border-radius: 10px;" ><b>Velcro Net For Windows</b></a> 
+          
+             <a href="#pigeon" class="card-title text-center ml-2 text-white" 
+             style="font-size:16px; border-radius: 10px; background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5); box-shadow: 0 4px 4px 0 rgba(87,75,172,.15); border-radius: 10px;" ><b>Pigeon Net For Balcony</b></a></div>
+            <!-- <h5 class="card-title text-center">Mosquito Nets For Window</h5>
+            <h5 class="card-title text-center">Mosquito Net For Door</h5>
+            <h5 class="card-title text-center">Mosquito Net For Balcony</h5>
+            <h5 class="card-title text-center">Velcro Net For Windows</h5>
+            <h5 class="card-title text-center">Pigeon Net For Balcony</h5> -->
+
+            <!-- <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;   background: linear-gradient(to bottom, #45aaf2, #3498db);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px; background: linear-gradient(to bottom, #ff6b81, #ee5253); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div>
+
+            <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px; background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div>
+            <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px; background: linear-gradient(90deg, rgba(190,153,215,1) 4%, rgba(135,253,29,0.6783963585434174) 47%, rgba(252,176,69,1) 93%); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div>
+            -----------------------------------------------
+            <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;  
+              background: linear-gradient(56deg, #45c4f9, #7d09ff 50.33%, #ff0be5);
+              border-radius: 10px;">
+               <b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px;
+               background: linear-gradient(56deg, #ff0b45, #ff7d09 50.33%, #ffcc00); border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div>
+
+
+            <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;   
+               background: linear-gradient(56deg, #45f9c4, #097dff 50.33%, #0be5ff);
+              border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px; 
+             background: linear-gradient(56deg, #7d09ff, #ff0be5 50.33%, #ff6b81);
+               border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div>
+
+
+            <div class="flex"> 
+              <p class="card-title text-center text-white" 
+              style="font-size:16px;  
+               background: linear-gradient(56deg, #ff8c00, #ffeb3b 50.33%, #e6ff00);
+               border-radius: 10px;"><b>Mosquito Net For Door</b></p> 
+              <p class="card-title text-center ml-2 text-white" 
+              style="font-size:16px; 
+               background: linear-gradient(56deg, #45f9c4, #2ecc71 50.33%, #3498db);
+               border-radius: 10px;"><b>Mosquito Net For Balcony</b>
+            </p></div> -->
+
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item d-block active ">
-        <img src="carosel/Screenshot6.png " class="d-block w-100" alt="Slide 1">
+      <div class="carousel-item d-block active "> -->
+        <!-- <img src="carosel/Screenshot6.png " class="d-block w-100" alt="Slide 1"> -->
         <!-- <div class="carousel-caption " style="color: #223a66; width: auto; ">
         <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
         <h4><em>Good Quality with Best Price</em></h4>
         <p class="cap" style="width: 630px; background-color: white; color: black;"><b>Pleated Mesh | Mesh For Window | Velcro Mosquito Mesh | Bird Mesh</b> </p>
     </div> -->
-        <div class="carousel-caption text-center">
+       <!-- <div class="carousel-caption text-center">
           <div class="card">
             <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
             <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
           </div>
-
-        </div>
-
-      </div>
-      <div class="carousel-item">
-        <img src="carosel/Screenshot5.png" class="d-block w-100" alt="Slide 2">
-        <!-- <div class="carousel-caption " style="color: #223a66; width: auto; ">
-        <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
-        <h4><em>Good Quality with Best Price</em></h4>
-        <p style="width: 630px; background-color: white; color: black;"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b> </p>
-    </div> -->
-        <div class="carousel-caption text-center">
-          <div class="card carodiv">
-            <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
-            <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="carousel-item">
-        <img src="carosel/Screenshot4.png" class="d-block w-100" alt="Slide 3">
-        <div class="carousel-caption " style="color: #223a66; width: auto; ">
-        <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
-        <h4><em>Good Quality with Best Price</em></h4>
-        <p style="width: 630px; background-color: white; color: black;"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b> </p>
-    </div>
-        <div class="carousel-caption text-center">
-          <div class="card">
-            <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
-            <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
-          </div>
-        </div>
-      </div> -->
-      <div class="carousel-item">
-        <img src="carosel/Screenshot3.png" class="d-block w-100" alt="Slide 3">
-        <!-- <div class="carousel-caption " style="color: #223a66; width: auto; ">
-        <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
-        <h4><em>Good Quality with Best Price</em></h4>
-        <p style="width: 630px; background-color: white; color: black;"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b> </p>
-    </div> -->
-        <div class="carousel-caption text-center">
-          <div class="card">
-            <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
-            <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="carousel-item">
-        <img src="assets/Screenshot1.png " class="d-block w-100" alt="Slide 1">
-        <div class="carousel-caption " style="color: #223a66; width: auto; ">
-        <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
-        <h4><em>Good Quality with Best Price</em></h4>
-        <p style="width: 630px; background-color: white; color: black;"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b> </p>
-    </div>
-        <div class="carousel-caption text-center">
-          <div class="card">
-            <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
-            <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="carousel-item">
-        <img src="assets/carosel3.jpeg" class="d-block w-100" alt="Slide 2">
-        <div class="carousel-caption " style="color: #223a66; width: auto; ">
-        <h1 class="text-center"><b>Mosquito Net Wala</b> </h1>
-        <h4><em>Good Quality with Best Price</em></h4>
-        <p style="width: 630px; background-color: white; color: black;"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b> </p>
-    </div>
-        <div class="carousel-caption text-center">
-          <div class="card caro">
-            <h1 class="card-title" style="background-color: #f8f9fa;"><b>Mosquito Net Wala</b></h1>
-            <p class="cap mb-0"><b>Pleated Net | Net For Window | Velcro Mosquito Net | Pigeon Net</b></p>
-          </div>
-        </div>
-      </div> -->
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <section id="about-us-section">
-    <h3 class="text-center text-white">About Us</h3>
-    <div class="container">
-
-      <section class="about-us">
+           </div>
+           </div></div></div> -->
+  
+  
+<!-- About -->
+<!-- <h3 class="text-center text-white">About Us</h3> -->
+  <div id="about-us-section">
+   
+    <div class=" container about-us">
+    <!-- <section class="about-us"> -->
+      <h3 class="text-center text-white" style="text-decoration: underline; margin-top: -30px;">About Us</h3>
         <div class="row">
           <div class="col-md-6">
             <div class="car" style="color: white;">
+              <!-- <h3 class="text-center text-white">About Us</h3> -->
               <div class="card-body">
-                <h2 class="card-title" id="about-us">Mosquitonet Wala</h2>
-                <p><b>We Have 25 Years Of Experience In This Field.</b></p>
+                <!-- <h2 class="card-title" id="about-us">Mosquitonet Wala</h2> -->
+                <!-- <p><b>We Have 25 Years Of Experience In This Field.</b></p> -->
                 <p class="para">At Mosquito Net Wala  we take pride in transforming living spaces into sanctuaries of peace and comfort. 
                   With a commitment to quality and innovation, we bring you a range of premium services designed to enhance your home and protect your loved ones.
                 </p>
@@ -473,10 +585,11 @@
                   and we are dedicated to making your living spaces more comfortable, enjoyable, and secure.
                 </p>
 
-                  <ul class=" para  arrow-list">
-                  <li> &#11166; Quality Craftsmanship</li>
-                  <li> &#11166;Innovative Designs</li>
-                  <li> &#11166;Customer Satisfaction</li>
+                  <ul class="para  arrow-list">
+                  <!-- <li> &#11166; Quality Craftsmanship</li> -->
+                  <!-- <li>  Quality Craftsmanship</li>
+                  <li> Innovative Designs</li>
+                  <li> Customer Satisfaction</li> -->
             
                 </ul>
               </div>
@@ -489,22 +602,22 @@
                     data-refresh-interval="50"></span>
                   <span class="plus text-white">+</span>
                 </div>
-                <p class="p text-white">Experiance Years</p>
+                <p class="p text-white">25 Years Experiance </p>
               </div>
               <div class="counter">
                 <div id="customers-counter">
                   <span class="count text-white" data-from="0" data-to="" data="900" data-speed="4000">0</span>
-                  <span class="plus text-white">+</span>
+                  <span class="plus text-white ">+</span>
                 </div>
-                <p class="p text-white">Customers</p>
+                <p class="p text-white">Happy Customers</p>
               </div>
-              <div class="counter">
+              <!-- <div class="counter">
                 <div id="services-counter">
                   <span class="count text-white" data-from="0" data-to="" data="800" data-speed="3000">0</span>
                   <span class="plus text-white" style="top:10px;">+</span>
                 </div>
                 <p class="p text-white">Installations</p>
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -539,9 +652,9 @@
             </div>
           </div>
         </div>
-      </section>
+      <!-- </section> -->
     </div>
-  </section>
+  </div>
 
   <!--Services -->
   <div class="container my-5" id="services">
@@ -549,7 +662,7 @@
     <br>
     <div class="row">
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="pleated">
           <img src="services/pleated.png" class="card-img-top" alt="Service 3">
           <div class="card-body">
             <h5 class="card-title">Pleated Net</h5>
@@ -572,7 +685,7 @@
         </div>
       </div>
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="window">
           <img src="services/MOS.png" class="card-img-top" alt="Service 1">
           <div class="card-body">
             <h5 class="card-title">
@@ -596,7 +709,7 @@
         </div>
       </div>
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="door">
           <img src="services/service4.jpg" class="card-img-top" alt="Service 2" style="height:190px;">
           <div class="card-body">
             <h5 class="card-title">Mosquito Net For Door</h5>
@@ -619,7 +732,7 @@
       <br>
       <!-- Three serices end here -->
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="balcony">
           <img src="services/balcony.jpg" class="card-img-top" alt="Service 3">
           <div class="card-body">
             <h5 class="card-title">Mosquito Net For Balcony</h5>
@@ -639,7 +752,7 @@
       </div>
 
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="wooden">
           <img src="services/wooden.jpg" class="card-img-top" alt="Service 3" style="height: 230px;">
           <div class="card-body">
             <h5 class="card-title">Mosquito Nets For Wooden Door</h5>
@@ -662,7 +775,7 @@
       </div>
 
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="velcro">
           <img src="services/velcro.jfif" class="card-img-top" alt="Service 3">
           <div class="card-body">
             <h5 class="card-title">Velcro Mosquito Net For Windows</h5>
@@ -703,7 +816,7 @@
 
 
       <div class="col-md-4 mt-2">
-        <div class="card">
+        <div class="card" id="pigeon">
           <img src="services/birdnet.webp" class="card-img-top" alt="Service 3" style="height: 200px;">
           <div class="card-body">
             <h5 class="card-title">Pigeon Net For Balcony</h5>
@@ -760,7 +873,7 @@
         <div class="col-md-3">
           <figure>
             <img class="imgg" src="services/clothdry.jpg" alt="Image 2">
-            <figcaption class="text-center"><b>Cloth Dryer system</b></figcaption>
+            <figcaption class="text-center"><b>Cloth Dryer System</b></figcaption>
           </figure>
 
         </div>
@@ -851,7 +964,7 @@
         Rating </b></h3>
     <div class="row flex" id="google-review">
       <!-- <div class="col-md-2"></div>  -->
-      <div class="offset-3 col-md-6 ">
+      <div class="offset-3 col-md-6">
         <div id="reviewCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -859,16 +972,16 @@
                 <h5 class="review-rating">&#9733; &#9733; &#9733; &#9733; &#9733;</h5>
                 <h5 class="text-google">Amey Deshpande</h5>
                 <p class="review-text">Very good service highly recommended 5 stars after sales service.</p>
-                <p>Thank you from Mosquito Net Wala</p>
+                <p>Thank You From Mosquito Net Wala</p>
               </div>
             </div>
             <div class="carousel-item">
               <div class="review-card">
                 <h5 class="review-rating">&#9733; &#9733; &#9733; &#9733; &#9734;</h5>
                 <h5 class="text">AG Mahadik</h5>
-                <p class="review-text">Polite team ,material quite good enough , easy to insall.Measurement calculation
+                <p class="review-text">Polite team ,material quite good enough , easy to install.measurement calculation
                   should be slightly improved.</p>
-                <p>Thank you from Mosquito Net Wala</p>
+                <p>Thank You From Mosquito Net Wala</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -876,7 +989,7 @@
                 <h5 class="review-rating">&#9733; &#9733; &#9733; &#9734;&#9734;</h5>
                 <h5 class="text">Bushan Narule</h5>
                 <p class="review-text">Best Service Good Product I,m so happy</p>
-                <p>Thank you from Mosquito Net Wala</p>
+                <p>Thank You From Mosquito Net Wala</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -884,6 +997,7 @@
                 <h5 class="review-rating">&#9733; &#9733; &#9733;&#9733;&#9733; </h5>
                 <h5 class="text">Shelke Patil</h5>
                 <p class="review-text">Good Service and good Product</p>
+                <p>Thank You From Mosquito Net Wala</p>
               </div>
             </div>
             <div class="carousel-item">
@@ -891,7 +1005,7 @@
                 <h5 class="review-rating">&#9733; &#9733; &#9733; &#9733;&#9734;</h5>
                 <h5 class="text">Suhas Kanhare</h5>
                 <p class="review-text">Wonderful, beautiful, very Nice Services</p>
-                <p>Thank you from Mosquito Net Wala</p>
+                <p>Thank You From Mosquito Net Wala</p>
               </div>
             </div>
           </div>
@@ -922,13 +1036,13 @@
             <div class="card-body">
               <h5 class="card-title">Address</h5>
               <p class="card-text"><i class="fas fa-map-marker-alt icon"></i>&nbsp;&nbsp;Shop No 01, Navarang Society,
-                above Sharda Apartment, Gulab Nagar, Chandrabhaga Nagar, Dhankawadi, Pune, Maharashtra 411043</p>
+                Above Sharda Apartment , Dhankawadi, Pune, Maharashtra 411043</p>
             </div>
           </div>
           <div class="card mt-3">
             <div class="card-body">
               <h5 class="card-title">Phone</h5>
-              <p class="card-text"><i class="fas fa-phone-alt icon"></i>&nbsp;&nbsp;+91 9370573627</p>
+              <p class="card-text"><i class="fas fa-phone-alt icon"></i>&nbsp;&nbsp;+919370573627</p>
             </div>
           </div>
           <div class="card mt-3">
@@ -1006,16 +1120,20 @@
       <div class="row">
         <div class="col-md-12">
           <a href="https://www.facebook.com/vilas.balki.902?mibextid=ZbWKwL" class="social-link">
-            <i  style="color: #5733ff;" class="fab fa-facebook-f social-icon"></i>
+            <!-- <i  style="color: #316FF6;" class="fab fa-facebook-f social-icon"></i> -->
+            <img src="assets/294710_circle_facebook_icon.png"  alt="facebook" style="width: 35px; height: 35px;" />
           </a>
           <a href="#" class="social-link">
-            <i  style="color: #1DA1F2;" class="fab fa-twitter social-icon"></i>
+            <!-- <i  style="color: #1DA1F2;" class="fab fa-twitter social-icon"></i> -->
+            <img src="assets/294709_circle_twitter_icon (1).png"  alt="twitter" style="width: 35px; height: 35px;" />
           </a>
           <a href="#" class="social-link">
-            <i   style="color: #feda75 " class="fab fa-instagram social-icon"></i>
+            <!-- <i   style="color: #feda75" class="fab fa-instagram social-icon"></i> -->
+            <img src="assets/6636566_instagram_social media_social network_icon.png"  alt="twitter" style="width: 35px; height: 35px;" />
           </a>
           <a href="https://maps.app.goo.gl/LY6exSjrfbH7YxPR7" class="social-link">
-            <i class="fab fa-google social-icon" style="color: rgb(255, 212, 59);"></i>
+            <!-- <i class="fab fa-google social-icon" style="color: rgb(255, 212, 59);"></i> -->
+             <img src="assets/icons8-my-business-48.png" alt="business"  style="width: 35px; height: 35px;" />
           </a>
          
         </div>
@@ -1053,6 +1171,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
 
 
   <script>
